@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vhopkins</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+<div class="chart-container">
+ <svg id="intro"  width="1500" height="700"></svg>
+ </div>
+				<p class="intro-first-line">Phd Student <br>Department of Political Science <br>Simon Fraser University </p>
+				<!-- <p>Research interests: interaction design for children, virtual reality, and sound</p> -->
+	
+<div class="down-arrow">
+				<a href="#research" pageScroll [routerLink]="['']" >
+					<i class="icon ion-chevron-down"></i>
+				</a>
+			</div>
+  <app-root></app-root>
+
+<style>
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+svg{
+	margin:0 auto;
+}
+.chart-container{
+	/*position:absolute;*/
+}
+
+.intro-first-line{
+	position:absolute;
+	top:40vh;
+	left:20vw;
+	background-color: rgba(255,255,255,.5);
+}
+
+a{
+	text-decoration:none;
+	color: #242424;
+
+}
+
+
+</style>
+ 
+<script src="https://d3js.org/d3.v4.min.js"></script>
+ <script async src="assets/d3.js"></script>
+</body>
+</html>

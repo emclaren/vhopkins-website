@@ -1,0 +1,495 @@
+@import"../../SCSS/mixin";
+
+
+i{
+  font-family:  "Ionicons";
+  src: url("/assets/fonts/ionicons.woff") format("woff");
+}
+
+.page-wrapper{
+  max-width:1250px;
+  margin: 0 1rem;
+
+  @media screen and (min-width: $break-medium) {
+    margin: 0 auto;
+  }
+}
+
+
+
+
+//////////////////////*** Introduction Styling ***///////////////////////////
+
+
+
+#intro{
+  margin:0 auto;
+  text-align:center;
+  height: 100vh;
+  max-height:1250px;
+  a{
+    text-decoration:none;
+    font-size: 1.25rem;
+    color: $font-color;
+    transition: color .5s ease;
+    &:hover{
+      transition: color 0.5s ease;
+      color: $font-accent;
+    }
+  }
+  p{
+    align-self: center; 
+    margin:1rem 0;
+    font-size: 1.1rem;
+    padding:0;
+
+  }
+  .text-wrapper{
+    padding: 0 0 5rem 0;
+
+    width:80%;
+    margin:0 auto;
+    background-color:rgba(255,255,255, .5);
+
+  }
+  .down-arrow{
+    position:absolute;
+    top:80vh;
+    left: 0; 
+    right: 0; 
+  }
+  @media screen and (min-width: $break-medium) {
+   max-width: 60%;
+   
+   .text-wrapper{
+    width:100%;
+    padding:0;
+    position:center;
+  }
+  p{
+   font-size: 1.1rem;
+ }
+
+
+}
+
+
+}
+
+
+
+
+
+////////////////////////////*Work Styling*//////////////////////////////
+#work{
+  padding: 1rem 0;
+   p{ width: 80%;
+    margin:0 auto;
+  }
+  #shuffleGrid{
+    margin-bottom: 2rem;
+  }
+  a{
+    color:$font-color;
+    &:visted{
+      color:$font-color;
+    }
+  }
+  h3{
+    font-size:1rem;
+    // font-weight:normal;
+    // font-family: Roboto, Open Sans, sans-serif;
+    padding: .25rem 0;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    margin: 0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:font-color;
+    // text-transform:none;
+  }
+  .project-title{
+    position: absolute;
+    transition: color 1s ease;
+    transition: background-color .5s ease;
+    bottom: 0;
+    height: 100%;
+    padding:.5rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index:20;
+    color:white;
+    // background-color: $font-accent;
+
+    background-color:rgba(0,0,0, .6);
+    // background-color: $font-color;
+    // background-color:white;
+    width:100%;
+    // transition: height .5s ease;
+    text-align:center;
+    border-top:none;
+    @media screen and (min-width: $break-medium) {
+     background-color:rgba(0,0,0, .6);
+     transition: background-color .5s ease;
+   }
+ }
+
+
+
+
+
+ /*Shuffle Tile Formatting*/
+
+ .aspect--size {
+
+  padding-bottom:  calc(80% + 8px)
+}
+
+.aspect__inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: background-color .5s ease;
+  transition: width .5s ease;
+  transition: height .5s ease;
+  img{
+    transition: transform .5s ease;
+    display: block;
+    // width: 100%;
+    max-width: none;
+    object-fit: cover;
+    height:100%;
+    -webkit-animation: filter 3s infinite;
+    filter: grayscale(60%);
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      height:100%;
+      width:auto;
+    }
+    @media screen and (min-width: $break-medium) {
+      filter: grayscale(60%);
+      transition: filter .5s ease;
+      transition: background-color .5s ease;
+    }
+  }
+
+
+  &:hover,  a:focus {
+    cursor:pointer;
+    background-color: $font-accent;
+
+    img{
+
+      transition: transform .5s ease;
+      // -moz-transform: scale(1.05);
+      // -webkit-transform: scale(1.05);
+      // transform: scale(1.05);
+      // border: 1px $font-color solid;
+      filter: grayscale(20%);
+      transition: filter .5s ease;
+
+    }
+    .project-title{
+      transition: background-color .5s ease;
+      background:rgba(255, 52, 89, .9);
+      height: 100%;
+      @media screen and (min-width: $break-medium) {
+        transition: background-color .5s ease;
+        background:rgba(255, 52, 89, .9);
+
+      }
+    }
+
+  }
+}
+/* default styles so shuffle doesn't have to set them (it will if they're missing) */
+.my-shuffle {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure images take up the same space when they load */
+.aspect {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+
+.aspect__inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.col-span {
+  width: 50%;
+}
+
+.my-sizer-element {
+  width: 8.33333%;
+}
+
+/* Bootstrap-style columns */
+.column {
+  position: relative;
+  float: left;
+  min-height: 1px;
+
+  padding-left: 4px;
+  padding-right: 4px;
+
+  /* Space between tiles */
+  margin-top: 8px;
+}
+@media screen and (min-width: $break-medium) {
+  padding:0;
+  h2{
+    width:80%;
+    margin: 2rem auto;
+  }
+  #shuffleGrid{
+    width:90%;
+    margin:0 auto;
+    margin-bottom:none;
+  }
+}
+}
+
+
+
+
+
+
+// About section styling
+
+
+#about{
+  // line-height:1.2rem;
+  
+  padding: 1rem 0;
+  background-color:rgba(255,255,255, .5);
+  li{
+    margin: .5rem 0;
+    line-height:1.3rem;
+    font-family: Roboto, Open Sans, sans-serif;
+  }
+  .about-intro{
+    text-align:justify;
+  }
+  .resume-container{
+    margin: 0;
+  }
+  p{
+    margin: .75rem 0;
+  }
+  h3{
+   padding: 2rem 0 .5rem 0;
+
+ }
+ @media screen and (min-width: $break-small) {
+  .about-intro{
+    padding:.75rem 0 0 0 ;
+  }
+  .resume-container{
+    width: 80%;
+    margin:0 auto;
+  }
+}
+@media screen and (min-width: $break-medium) {
+  width: 80%;
+  margin: 8rem auto ;
+  padding:0;
+
+  ul{
+    margin: .5rem 2rem 2rem 2rem;
+
+  }
+  h3{
+    padding:1rem 0 .5rem 0
+  }
+  .about-intro{
+    padding:1.5rem 0  1rem 0 ;
+  }
+  .resume-container{
+    width: 70%;
+    margin:0 auto;
+  }
+}
+}
+
+
+
+
+
+#research{
+  // line-height:1.2rem;
+  
+  padding: 1rem 0;
+  background-color:rgba(255,255,255, .5);
+  li{
+    margin: .5rem 0;
+    line-height:1.3rem;
+    font-family: Roboto, Open Sans, sans-serif;
+  }
+  .about-intro{
+    text-align:justify;
+  }
+  .resume-container{
+    margin: 0;
+  }
+  p{
+    margin: .75rem 0;
+  }
+  h3{
+   padding: 2rem 0 .5rem 0;
+
+ }
+ @media screen and (min-width: $break-small) {
+  .about-intro{
+    padding:.75rem 0 0 0 ;
+  }
+  .resume-container{
+    width: 80%;
+    margin:0 auto;
+  }
+}
+@media screen and (min-width: $break-medium) {
+  width: 80%;
+  margin: 8rem auto ;
+  padding:0;
+
+  ul{
+    margin: .5rem 2rem 2rem 2rem;
+
+  }
+  h3{
+    padding:1rem 0 .5rem 0
+  }
+  .about-intro{
+    padding:1.5rem 0  1rem 0 ;
+  }
+  .resume-container{
+    width: 70%;
+    margin:0 auto;
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+//***Contact Styling ***/
+
+#contact{
+ z-index:500;
+ margin:0 auto;
+ // padding:1rem 0;
+ height: 85vh;
+ color: $font-color;
+p{
+  width:18%;
+  margin:0 auto;
+  // text-align:center;
+}
+
+ .contact-list{
+  height:60vh;
+  width:100%;
+  display: flex;
+  flex-direction:column;
+  list-style: none; 
+  padding:5rem 0;
+  li{
+
+    padding:.8rem;
+    text-align:center;
+    display:inline-block;
+  }
+  a{
+    color: $font-color;
+    // border-bottom:1px solid white;
+    // text-decoration-color: rgba(255,52,89, .7);
+    // text-decoration:none;
+    font-size:1.3rem;
+    transition: color .5s ease;
+    &:hover{
+      color: $font-accent;
+      transition: color 0.5s ease;
+      
+    }
+  }
+
+}
+@media screen and (min-width: $break-small) {
+  height:90vh;
+}
+@media screen and (min-width: $break-medium) {
+  height:90vh;
+  width:80%;
+  h2{
+   margin:3rem 1rem;
+ }
+ .contact-list{
+  flex-direction: row;
+  justify-content: center;
+
+}
+}
+
+}
+
+
+
+.page-wrapper{
+ -webkit-animation: fadein .5s ease; /* Safari and Chrome */
+ -moz-animation: fadein .5s ease; /* Firefox */
+ -ms-animation: fadein .5s ease; /* Internet Explorer */
+ -o-animation: fadein .5s ease; /* Opera */
+ animation: fadein .5s ease;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+
+}
+
+.preload1{
+ background:  url('/assets/img/blocktalks/block-talks-header-min.jpg');
+}
+.preload2{
+ background: url('/assets/img/asking/asking-for-a-friend-header-min.jpg');
+}
+.preload3{
+  background: url('/assets/img/earthgazement/earthgazing-header-min.jpg');
+}
+
+.preload4{
+ background: url('/assets/img/tangibles/tangibles-header-min.jpg');
+} 
+.preload5{
+
+  background:  url('/assets/img/audiomatic/audio-matic-header-min.jpg');
+}
+.preload6{
+
+  background:  url('/assets/img/mindfull/mind-full-header-min.jpg');  
+
+}
+
+

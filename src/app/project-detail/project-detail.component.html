@@ -1,0 +1,185 @@
+
+<div *ngIf="project" >
+	<div class="page-wrapper" id="header" name="header">
+		<div id="work-project1" class="work-project">
+			<div  class=" project-header {{project.class}} project-detail-header">
+				<h2>{{project.name}}</h2>
+				<p class="intro-project">{{project.summary}}</p>			
+				<div>
+					<a href="#{{project.class}}" pageScroll >
+						<i class="icon ion-chevron-down down-arrow"></i>
+					</a>
+				</div>
+
+			</div>		
+
+
+			<div class="project-intro">
+				<div id="{{project.class}}"  class="intro-container">
+
+					<div>
+						<h3>Overview</h3>
+						<p>{{project.overview}}</p>
+
+						<h3>My Role</h3>
+						<p>{{project.role}}</p>
+
+						<h3>Team Members</h3>
+						<p>{{project.team}}</p>
+
+
+						<h3>Keywords</h3>
+						<p>{{project.tags}}</p>
+
+						<br>
+						<br>
+
+						<div class="triangle-container">
+							<div class='wrap triangle-outer'>
+								<div class='crop'>
+									<img src='assets/img/red-1-min.jpg' alt="Decorative triangle image">
+								</div>
+							</div>
+							<div class='wrap  triangle-inner'>
+								<div class='crop'>
+									<img src='assets/img/red-1-min.jpg' alt="Decorative triangle image">
+								</div>
+							</div>
+							<div class='wrap '>
+								<div class='crop'>
+									<img src='assets/img/red-2-min.jpg' alt="Decorative triangle image">
+								</div>
+							</div> 
+							<div class='wrap triangle-inner'>
+								<div class='crop'>
+									<img  src='assets/img/red-2-min.jpg' alt="Decorative triangle image">
+								</div>
+							</div>
+							<div class='wrap triangle-outer'>
+								<div class='crop'>
+									<img src='assets/img/red-3-min.jpg' alt="Decorative triangle image">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div >
+
+
+			<div class=" project-image {{project.class}}-image-1">
+				<div class="image-description">
+					<h3 class="">{{project.caption1}}</h3>
+				</div>
+			</div>
+			
+			<div>
+
+				<div class=" project-image {{project.class}}-image-2">
+					<div class="image-description">
+						<h3 class="">{{project.caption2}}</h3>
+					</div>
+				</div>
+
+				
+
+				<div class="project-block">	
+					<h3>Challenge</h3>
+					<div>
+						<h4>{{project.challengeHeading}}</h4>
+						<p>{{project.c1}}</p>
+						<p>{{project.c2}}</p>
+						<p>{{project.c3}}</p>
+					</div>
+				</div>
+				
+
+			</div>
+			<div class=" project-image {{project.class}}-image-3">
+				<div class="image-description">
+					<h3 class="">{{project.caption3}}</h3>
+				</div>
+			</div>
+			<div class=" project-image {{project.class}}-image-4">
+				<div class="image-description">
+					<h3 class="">{{project.caption4}}</h3>
+				</div>
+			</div>
+
+
+			<!-- </div> -->
+
+
+
+
+			<div class="project-block">
+
+				<h3>Process</h3>
+				<div>
+					<h4>{{project.problemHeading1}}</h4>
+					<p>{{project.p1}}</p>
+					<p>{{project.p2}}</p>
+
+					<p>{{project.p3}}</p>
+
+				</div>
+				<h4>{{project.problemHeading2}}</h4>
+				<div>
+					<p>{{project.p4}}</p>
+					<p>{{project.p5}}</p>
+				</div>
+				<div>
+
+
+
+
+				</div>
+				
+
+			</div>
+
+
+			<div class=" project-image {{project.class}}-image-5">
+
+				<div class="image-description">
+					<h3 class="">{{project.caption5}}</h3>
+
+				</div>
+				<div class=" project-image {{project.class}}-image-6">
+
+					<div class="image-description">
+						<h3 class="">{{project.caption6}}</h3>
+
+					</div>
+				</div>
+				<div class="project-block">
+					<h3>Results and Next Steps</h3>
+					<h4>{{project.resultHeading1}}</h4>
+					<div>
+						<p>{{project.r1}} <a href="{{project.url}}" target="_blank"class="inline-url">{{project.urltext}}</a></p>
+					</div>
+					<h4>{{project.resultHeading2}}</h4>
+					<p>{{project.r2}}</p>
+					<p>{{project.r3}} </p>
+				</div>
+				<div class=" project-image {{project.class}}-image-7">
+					<div class="image-description">
+						<h3 class="">{{project.caption7}}</h3>
+					</div>
+				</div>
+				<div class="project-block">
+				<a pageScroll [routerLink]="['']" href="#work">
+					<!-- Old go back button, put it back once ios glitch fixed <button (click)="goBack()">go back</button> -->
+					<button>go back</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
